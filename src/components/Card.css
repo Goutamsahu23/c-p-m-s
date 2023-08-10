@@ -1,0 +1,39 @@
+.Card {
+    height: 5cm;
+    width: 8cm;
+    background-color: whitesmoke;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid black;
+  }
+  
+  .Card_btn {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+  }
+  
+  .Card_btn:hover {
+    background-color: rgb(76, 154, 185);
+    color: black;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 768px) {
+    .Card {
+      width: 100%;
+      
+    }
+    .Card_btn{
+        /* width: 10px; */
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+  }
+  

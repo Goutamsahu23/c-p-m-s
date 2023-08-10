@@ -1,13 +1,865 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Header Component css */
+.Header {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  box-shadow: 5px 0px 20px 5px black;
+  background: linear-gradient(to left, rgb(0, 85, 128), white);
 }
+
+.img {
+  margin-left: 30px;
+  height: 150px;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+}
+
+.btns {
+  display: flex;
+  position: relative;
+  right: 50px;
+  height: 35px;
+  column-gap: 10px;
+}
+
+.btns a {
+  text-decoration: none;
+}
+
+.btns button {
+  border-radius: 8px;
+  width: 100px;
+  transition: all 0.5s;
+}
+
+.btns button:hover {
+  border: none;
+  font-weight: bold;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .Header {
+      height: 8vh;
+  }
+  .img {
+      margin-left: 10px;
+      height: 120px;
+  }
+  .btns {
+      right: 25px;
+  }
+  .btns button {
+      width: 80px;
+  }
+}
+
+
+/* header css end */
+
+
+/* mainpage css start */
+
+.mainpage {
+  background: linear-gradient(to left, rgb(0, 85, 128), white);
+  background-repeat: no-repeat;
+  background-size: 100vw 80vh;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainpage > h4 {
+  color: white;
+  font-style: italic;
+}
+
+.mainpage > button {
+  width: 200px;
+  background-color: transparent;
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 8px;
+  transition: all 0.5s;
+  font-weight: bold;
+}
+
+.mainpage > button:hover {
+  box-shadow: 8px 10px 10px black;
+  border: none;
+}
+
+.mainpage > button > a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .mainpage {
+      background-size: 100vw 60vh;
+      height: 60vh;
+  }
+  .mainpage > h4 {
+      font-size: 18px;
+  }
+  .mainpage > button {
+      width: 160px;
+      height: 40px;
+      font-size: 14px;
+      margin-top: 15px;
+  }
+}
+
+
+/* mainpage css end  */
+
+
+/* user and admin login/signup page */
+  
+.Login_Page_Container {
+  background: linear-gradient(to left, rgb(0, 85, 128), white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  display: flex;
+  justify-content: space-between;
+}
+
+.loginPage_input > input {
+  width: 450px;
+  height: 50px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.user_login_btn {
+  width: 450px;
+  background-color: rgb(71, 188, 247);
+  height: 50px;
+  border-radius: 8px;
+  transition: all 0.5s;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.user_login_btn:hover {
+  box-shadow: 8px 10px 10px black;
+  border: none;
+}
+
+.OR-line {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.line {
+  height: 1px;
+  background-color: black;
+  width: 210px;
+  position: relative;
+  top: 14px;
+}
+
+.or {
+  position: relative;
+  color: black;
+  padding-right: 5px;
+  padding-left: 5px;
+  top: 4px;
+}
+
+.google_btn {
+  margin-top: 20px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .loginPage_input > input,
+  .user_login_btn,
+  .OR-line {
+      width: 100%;
+
+  }
+  
+  .OR-line {
+      justify-content: center;
+  }
+  
+  .line {
+      width: 80px;
+  }
+}
+
+
+/* user login/signup page end */
+
+
+
+/* user/admin dashboard page start */
+
+.Dashboard_Header {
+    height: 10vh;
+    width: 100vw;
+    background-color: whitesmoke;
+    box-shadow: 5px 0px 20px 5px black;
+    z-index: 10;
+}
+
+.Dashboard_Header > img {
+    margin-top: -10px;
+    margin-left: 10px;
+}
+
+.user_Dashboard_Nav {
+    height: 90vh;
+    width: 18vw;
+    position: relative;
+    top: -20px;
+    /* background-color: whitesmoke; */
+    box-shadow: 5px 20px 20px 5px black;
+}
+
+.user_Dashboard_Nav > ul {
+    position: relative;
+    top: 60px;
+}
+
+.user_Dashboard_Nav > ul > li > a {
+    text-align: center;
+    display: flex;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    position: relative;
+    padding-left: 80px;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: all 0.5s ease-out;
+    text-decoration: none;
+    color: black;
+}
+
+.user_Dashboard_Nav > ul > li > a:hover {
+    background-color: rgb(76, 154, 185);
+    color: white;
+}
+
+.user_Dashboard_Nav > ul > li a.active {
+    color: red;
+    font-weight: bold;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .user_Dashboard_Nav {
+        width: 100vw;
+        height: auto;
+    }
+    .user_Dashboard_Nav > ul {
+        top: 5px;
+    }
+    .user_Dashboard_Nav > ul > li > a {
+        padding: 10px;
+        margin: 10px;
+        padding-left: 40px;
+    }
+}
+
+
+/* user/admin dashboard page end */
+
+/* user profile page start */
+.profilePage {
+  position: relative;
+  margin-top: -540px;
+  text-align: center;
+  margin-left: 200px;
+}
+
+.profilePage > h2 {
+  font-style: italic;
+  color: red;
+  margin-bottom: 20px;
+}
+
+.profilePage a {
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+
+.profilePage a:hover {
+  background-color: rgb(76, 154, 185);
+  color: black;
+}
+
+.profilePage > p {
+  display: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .profilePage {
+      margin-top: 0;
+      margin-left: 0;
+  }
+}
+
+/* user profile page end */
+
+/* Reservation of parking page start */
+.parking_reservation {
+  position: relative;
+  left: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -43%;
+  width: 78vw;
+}
+
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .parking_reservation {
+      left: 0;
+      margin-top: -20%;
+      width: 100vw;
+  }
+}
+
+/* Reservation of parking page end */
+
+/* Reservation history page start */
+
+
+.reservation-table {
+  width: 75%;
+  border-collapse: collapse;
+  margin-top: -640px;
+  margin-left: 300px;
+}
+
+.reservation-table th,
+.reservation-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.reservation-table th {
+  background-color: #f2f2f2;
+}
+
+.reservation-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .reservation-table {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+
+/* reservation history end */
+
+/* account settings page start */
+.accountSettingPage {
+  position: relative;
+  width: 665px;
+  left: 35%;
+  margin-top: -570px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.accountSettingPage > h2 {
+  margin: 30px;
+}
+
+.accountSettingPage > form input {
+  height: 40px;
+  width: 600px;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+.update_btn {
+  height: 40px;
+  width: 600px;
+  border-radius: 8px;
+  margin: 10px;
+  background-color: rgb(76, 154, 185);
+  transition: all 0.5s;
+}
+
+.update_btn:hover {
+  box-shadow: 8px 10px 10px black;
+  border: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .accountSettingPage {
+      width: 100%;
+      left: 0;
+      margin-top: 0;
+  }
+  .accountSettingPage > form input,
+  .update_btn {
+      width: 100%;
+  }
+}
+
+/* account setting page end */
+
+/* slot booking page strart */
+
+
+/* slot booking page end */
+.slotBookingPage {
+  height: 550px;
+}
+
+.slot-btns-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: -20px;
+  margin-bottom: 5px;
+}
+
+.slot-btns {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid black;
+  transition: all 0.5s;
+}
+
+.slot-btns:hover {
+  border: none;
+  background-color: rgb(76, 154, 185);
+}
+
+.back-btn {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid black;
+  background-color: red;
+  transition: all 0.5s;
+  position: relative;
+  top: -60px;
+}
+
+.back-btn:hover {
+  border: none;
+  color: white;
+}
+
+.book-slot-from {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 5px;
+}
+
+.book-slot-input {
+  width: 400px;
+  height: 35px;
+  border-radius: 8px;
+}
+
+.form-to-input {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+.form-to-input > label > span {
+  position: relative;
+  top: -30px;
+  left: 20px;
+}
+
+.form-input,
+.to-input {
+  width: 189px;
+  position: relative;
+  left: -15px;
+  margin-bottom: 20px;
+}
+
+.book-slot-btn {
+  width: 400px;
+  background-color: rgb(71, 188, 247);
+  height: 50px;
+  border-radius: 8px;
+  transition: all 0.5s;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.book-slot-btn:hover {
+  box-shadow: 8px 10px 10px black;
+  border: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .slotBookingPage,
+  .slot-btns-container,
+  .book-slot-from {
+      width: 100%;
+  }
+  
+  .slot-btns {
+    position: relative;
+    top: 105px;
+      width: 45%;
+  }
+  
+  .back-btn {
+      display: none;
+  }
+  
+  .form-to-input {
+      flex-direction: column;
+  }
+  
+  .form-input,
+  .to-input {
+      width: 100%;
+      left: 0;
+  }
+  .book-slot-from{
+    margin-top: 110px;
+  }
+  
+  .book-slot-btn {
+      width: 50%;
+  }
+}
+
+
+/* admin-alluser page  start*/
+
+.user-table {
+  width: 75%;
+  border-collapse: collapse;
+  margin-top: -650px;
+  margin-left: 300px;
+}
+
+.user-table th,
+.user-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.user-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.user-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .user-table {
+      width: 100%;
+      margin: 0;
+  }
+}
+
+/* admin-all user page end */
+
+/* add plaes page start */
+
+.add-parking-place {
+  width: 1050px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: -700px;
+  margin-left: 400px;
+}
+
+.add-parking-place h2 {
+  margin-bottom: 10px;
+}
+
+.add-parking-place label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.add-parking-place input,
+.add-parking-place textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-parking-place button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-parking-place button:hover {
+  background-color: #0056b3;
+}
+
+.add-parking-place ul {
+  list-style: none;
+  padding: 0;
+}
+
+.add-parking-place li {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-parking-place p {
+  margin: 0;
+}
+
+.all-places {
+  margin-top: 20px;
+}
+
+.places-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.place-card {
+  width: calc(20.00% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.place-card h4 {
+  margin: 0;
+}
+
+.place-card p {
+  margin: 10px 0;
+}
+
+.place-card button {
+  padding: 6px 12px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.place-card button:hover {
+  background-color: #c0392b;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .add-parking-place,
+  .place-card {
+    
+      width: 100%;
+      margin-left: 0;
+  }
+  .add-parking-place{
+    position: relative;
+    top: 700px;
+  }
+}
+
+/* all places page end */
+
+/* Parking history page start*/
+
+.admin-booking-requests {
+  text-align: center;
+  margin-top: -50px;
+}
+
+.search-bar {
+  margin-left: 50px; /* Adjust as needed */
+  position: relative;
+  top: -600px;
+  margin-bottom: 80px;
+}
+
+.search-bar input {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.booking-table {
+  width: 75%;
+  border-collapse: collapse;
+  margin-left: 320px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.booking-table th,
+.booking-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.booking-table th {
+  background-color: #f5f5f5;
+}
+
+.booking-row:hover {
+  background-color: #f0f0f0;
+}
+
+.booking-row button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.booking-row button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .search-bar {
+    margin-top: 50px;
+    top: 0;
+  }
+
+  .booking-table {
+    width: 100%;
+    margin-left: -50px;
+  }
+}
+
+
+  
+/* parking history page end */
+
+
+/* all bookings start  */
+
+
+
+.booking-list {
+  text-align: center;
+}
+
+.booking-table {
+  width: 75%;
+  border-collapse: collapse;
+  margin-top: -620px;
+  margin-left: 320px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.booking-table th,
+.booking-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.booking-table th {
+  background-color: #f5f5f5;
+}
+
+.booking-row:hover {
+  background-color: #f0f0f0;
+}
+
+.clear-button {
+  background-color: red;
+  padding: 10px;
+  border-radius: 8px;
+  width: 115px;
+  color: white;
+  border: none;
+  position: fixed;
+  top: 90px;
+  right: 70px;
+}
+
+.clear-button:hover {
+  background-color: rgb(223, 55, 88);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .booking-table {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .clear-button {
+    position: static;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+  
+/* all bookings end*/
